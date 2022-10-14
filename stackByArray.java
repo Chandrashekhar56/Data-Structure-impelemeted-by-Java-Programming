@@ -24,9 +24,9 @@ class node{
     }
   }
 }
-class stackByArray extends node{
+class stackByArray{
   public static void main(String[] args){
-      stackByArray ob=new stackByArray();
+      node ob=new node();
       for(;;){
         System.out.println(" ");
         System.out.println("Which operation do you want: ");
