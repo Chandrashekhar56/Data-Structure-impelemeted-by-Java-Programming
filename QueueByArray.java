@@ -7,14 +7,61 @@ class queue{
   int delete;
 
   //This is enqueue opearation
-  void enqueue(){ System.out.println("Enter Element "); element=s.nextInt(); if(front==-1 && rear==-1){front=front+1; rear=rear+1; queueArr[rear]=element;}else if(rear==maxsize-1){System.out.println("Queue is already full so Insertion not possible");}else{rear=rear+1; queueArr[rear]=element;}}
+  void enqueue()
+  { 
+    System.out.println("Enter Element "); 
+    element=s.nextInt(); 
+    if(front==-1 && rear==-1)
+    {
+      front=front+1; 
+      rear=rear+1; 
+      queueArr[rear]=element;
+    }
+    else if(rear==maxsize-1)
+    {
+      System.out.println("Queue is already full so Insertion not possible");
+    }
+    else
+    {
+      rear=rear+1; 
+      queueArr[rear]=element;
+    }
+  }
 
   //This is dequeue operation
-  void dequeue(){if(front==-1 && rear==-1){System.out.println("Queue is already empty");}else if(front==rear){delete=queueArr[front]; front=rear=-1;}else{delete=queueArr[front];front=front+1;}}
+  void dequeue()
+  {
+    if(front==-1 && rear==-1)
+    {
+      System.out.println("Queue is already empty");
+    }
+    else if(front==rear)
+    {
+      delete=queueArr[front]; 
+      front=rear=-1;
+    }
+    else
+    {
+      delete=queueArr[front];
+      front=front+1;
+    }
+  }
 
   //This is display operation
-  void display(){if(front==-1 && rear==-1){System.out.println("Queue is empty");}else{ System.out.println("Existing elements in Queue: ");int i;
-  for(i=front;i<=rear;i++){System.out.println(queueArr[i]);}}}
+  void display()
+  {
+    if(front==-1 && rear==-1)
+    {
+      System.out.println("Queue is empty");
+    }
+    else
+    { 
+      System.out.println("Existing elements in Queue: ");
+      int i;
+      for(i=front;i<=rear;i++){System.out.println(queueArr[i]);
+     }
+    }
+  }
 }
 class QueueByArray{
   public static void main(String[] args) {
