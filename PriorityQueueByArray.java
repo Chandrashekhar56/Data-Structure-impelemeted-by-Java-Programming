@@ -28,7 +28,7 @@ class queue{
       {
         for(j=i;j<=rear;j++)
         {
-          if(queueArr[i]<=queueArr[j])//this is descending order priority queue.
+          if(queueArr[i]>=queueArr[j])//this is ascending order priority queue.
           {
             temp=queueArr[i];
             queueArr[i]=queueArr[j];
