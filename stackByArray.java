@@ -6,24 +6,62 @@ class node{
         int []stack=new int[maxsize];
         int top=-1;
         //This is push operation
-        public void push(){ System.out.println("Enter element ");
-        int element=s.nextInt(); if(top==maxsize-1){
-        System.out.println("Insertion not possible BCZ top at Array maxsize ");} else{ top=top+1; stack[top]=element;}}
+        public void push()
+        { 
+                System.out.println("Enter element ");
+                int element=s.nextInt(); 
+                if(top==maxsize-1)
+                {
+                         System.out.println("Insertion not possible BCZ top at Array maxsize ");
+                } 
+                else
+                { 
+                        top=top+1; 
+                        stack[top]=element;
+                }
+        }
         //this is pop operation
-        public void pop(){ if(top==-1){ System.out.println("Stack is already empty ");} else{ top=top-1; System.out.println("Element popped from stack ");}}
+        public void pop()
+        { 
+                if(top==-1)
+                { 
+                        System.out.println("Stack is already empty ");
+                } 
+                else
+                { 
+                        top=top-1; 
+                        System.out.println("Element popped from stack ");
+                }
+        }
         //this is peek operation
-        public void peek(){
-        if (top==-1) { System.out.println("Stack is empty ");} else{
-        System.out.println("Top element in Stack "+stack[top]);}}
+        public void peek()
+        {
+                if (top==-1) 
+                { 
+                        System.out.println("Stack is empty ");
+                } 
+                else
+                {
+                        System.out.println("Top element in Stack "+stack[top]);
+                }
+        }
         //this is display operation
-        public void display(){
-        if (top==-1) { System.out.println("Stack is empty ");} else{
-        System.out.println("Existing element in Stack");
-        for(int i=top;i>=0;i--){ System.out.println(stack[i]);
-      }
-    }
-  }
-}
+        public void display()
+        {
+                if (top==-1) 
+                { 
+                        System.out.println("Stack is empty ");
+                } 
+                else
+                {
+                        System.out.println("Existing element in Stack");
+                        for(int i=top;i>=0;i--)
+                        { 
+                                System.out.println(stack[i]);
+                        }
+                 }
+         }
+        }
 class stackByArray{
   public static void main(String[] args){
       node ob=new node();
